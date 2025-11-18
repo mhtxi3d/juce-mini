@@ -314,15 +314,15 @@ This project uses [Catch2](https://github.com/catchorg/Catch2) for unit testing.
 
 ### Step 1: Create Test File
 
-Create a new test file in the `tests/` directory:
+Create a new test file in the `src/tests/` directory:
 
 ```bash
-touch tests/test_myfeature.cpp
+touch src/tests/test_myfeature.cpp
 ```
 
 ### Step 2: Write Test Cases
 
-Example `tests/test_myfeature.cpp`:
+Example `src/tests/test_myfeature.cpp`:
 
 ```cpp
 #include <catch2/catch_all.hpp>
@@ -384,7 +384,7 @@ TEST_CASE("MyFeature with fixtures", "[myfeature]")
 
 ### Step 3: Register Test File
 
-Edit `tests/CMakeLists.txt` to add your test file:
+Edit `src/tests/CMakeLists.txt` to add your test file:
 
 ```cmake
 add_executable(SampleProjectTests
@@ -396,7 +396,7 @@ add_executable(SampleProjectTests
 
 ### Step 4: Link Required Libraries
 
-If your tests need additional libraries, add them to `tests/CMakeLists.txt`:
+If your tests need additional libraries, add them to `src/tests/CMakeLists.txt`:
 
 ```cmake
 target_link_libraries(SampleProjectTests
@@ -769,7 +769,7 @@ sudo apt-get install cmake
 **Symptoms:** CTest reports no tests found.
 
 **Solution:**
-1. Ensure `catch_discover_tests()` is called in `tests/CMakeLists.txt`
+1. Ensure `catch_discover_tests()` is called in `src/tests/CMakeLists.txt`
 2. Rebuild the project
 3. Check that Catch2 is properly linked
 
@@ -793,8 +793,8 @@ sudo apt-get install cmake
 
 ### Add Tests Checklist
 
-- [ ] Create test file in `tests/`
+- [ ] Create test file in `src/tests/`
 - [ ] Write test cases with `TEST_CASE` and `SECTION`
-- [ ] Add file to `tests/CMakeLists.txt`
+- [ ] Add file to `src/tests/CMakeLists.txt`
 - [ ] Link required libraries
 - [ ] Run with `ctest` or test executable
