@@ -1,0 +1,15 @@
+[submodule "src/third_party/JUCE"]
+	path = src/third_party/JUCE
+	url = https://github.com/juce-framework/JUCE.git
+[submodule "src/third_party/json"]
+	path = src/third_party/json
+	url = https://github.com/nlohmann/json.git
+[submodule "src/third_party/Catch2"]
+	path = src/third_party/Catch2
+	url = https://github.com/catchorg/Catch2.git
+[submodule "src/third_party/easyloggingpp"]
+	path = src/third_party/easyloggingpp
+	url = https://github.com/abumq/easyloggingpp.git
+[submodule "src/third_party/sqlite"]
+	path = src/third_party/sqlite
+	url = https://github.com/azadkuh/sqlite-amalgamation.git
